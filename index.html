@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vue</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 <body>
 
+<div id="app">
+    <h1 v-if="isLoggedIn"> {{message}} {{username}} </h1>
+    <h1 v-if="!isLoggedIn"> Anon User </h1>
+
+    <h1 v-show="isLoggedIn"> {{message}} {{username}} </h1>
+    <h1 v-show="!isLoggedIn"> Anon User </h1>
+</div>
+
+
+<script src="app.js"></script>
 </body>
 </html>
